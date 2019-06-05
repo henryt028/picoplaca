@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="inner">
+        <div class="row">
+            <div class="title">
+                <label class="title-label">Pico Placa Predictor</label>
+            </div>
+        </div>
+        <div class="row">
+            <form class="form" [formGroup]="predictorForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="label text-left">
+                        <label class="text-label">Placa:</label>
+                    </div>
+                    <input type="text" formControlName="placa" class="form-control predictor-input" placeholder="Ej.: PBA 0000"/>
+                </div>
+                <div class="form-group">
+                    <div class="label text-left">
+                        <label class="text-label">Fecha:</label>
+                    </div>
+                    <input type="text" [ngClass]="f.fecha.value" class="form-control" formControlName="fecha"
+                        placeholder="Selecciona una fecha" bsDatepicker>
+                </div>
+                <div class="form-group">
+                    <div class="label text-left">
+                        <label class="text-label">Hora:</label>
+                    </div>
+                    <input type="text" formControlName="placa" class="form-control predictor-input" placeholder="Ej.: PBA 0000"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="btn">Ver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
