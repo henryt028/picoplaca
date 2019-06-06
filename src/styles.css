@@ -1,8 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-@font-face {
-    font-family: "Lato-Medium";
-    src: url(assets/font/Lato-Medium.ttf);
-  }
-  .theme-green .bs-datepicker-head {
-    background-color: #009B3A;
-  }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PicoplacaRoutingModule } from './picoplaca.routing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 @NgModule({
     imports: [
@@ -11,6 +12,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
         ReactiveFormsModule,
         FormsModule,
         BsDatepickerModule.forRoot(),
+        TimepickerModule.forRoot()
     ],
     exports: [],
     declarations: [

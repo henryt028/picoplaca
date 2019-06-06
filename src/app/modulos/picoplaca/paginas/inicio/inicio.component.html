@@ -9,25 +9,27 @@
             <form class="form" [formGroup]="predictorForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <div class="label text-left">
-                        <label class="text-label">Placa:</label>
+                        <label class="text-label">Número de Placa:</label>
                     </div>
-                    <input type="text" formControlName="placa" class="form-control predictor-input" placeholder="Ej.: PBA 0000"/>
+                    <input type="text" formControlName="placa" class="form-control predictor-input" placeholder="Ej.: 1234"
+                    [ngClass]="{'is-invalid': f.placa.errors && f.placa.value!=null}"/>
+                    <div *ngIf="f.placa.errors" class="invalid-feedback">Inválido</div>
                 </div>
                 <div class="form-group">
                     <div class="label text-left">
                         <label class="text-label">Fecha:</label>
                     </div>
-                    <input type="text" [ngClass]="f.fecha.value" class="form-control" formControlName="fecha"
+                    <input type="text" [ngClass]="f.fecha.value" class="form-control predictor-input" formControlName="fecha"
                         placeholder="Selecciona una fecha" bsDatepicker>
                 </div>
                 <div class="form-group">
                     <div class="label text-left">
                         <label class="text-label">Hora:</label>
                     </div>
-                    <input type="text" formControlName="placa" class="form-control predictor-input" placeholder="Ej.: PBA 0000"/>
+                    <timepicker formControlName="hora" class="d-flex justify-content-center"></timepicker>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary" id="btn">Ver</button>
+                    <button class="btn btn-primary" id="btn" [disabled]="disableButton()">Ver</button>
                 </div>
             </form>
         </div>

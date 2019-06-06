@@ -17,11 +17,25 @@ export class InicioComponent implements OnInit {
     }
     ngOnInit() {
         this.predictorForm = this.formBuilder.group({
-            placa: ['', Validators.required],
-            fecha: [null]
+            placa: [null, [Validators.pattern('^[0-9]{4}$'), Validators.required ]],
+            fecha: [''],
+            hora: [null],
         });
     }
     onSubmit() {
         this.submitted = true;
+        this.router.navigate(['resultado']);
+    }
+    get f() {
+        return this.predictorForm.controls;
+    }
+    disableButton() {
+        if (this.predictorForm.get('placa').value !== null &&
+        this.predictorForm.get('fecha').value !== '' &&
+        this.predictorForm.get('hora').value !== null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
