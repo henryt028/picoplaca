@@ -6,13 +6,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="label text-left">
-                <label class="text-label">El vehículo con número de Placa:</label>
+            <div class="data">
+                <label class="text-label">El vehículo con número de Placa: {{request.numeroPlaca}}.</label>
             </div>
         </div>
         <div class="row">
+                <div class="data">
+                    <label class="text-label">{{prediction}}</label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="data">
+                        <label class="text-label">Fecha: {{request.fecha}}   Hora: {{request.hora.hora}}:{{formatMin(request.hora.minuto)}}</label>
+                    </div>
+                </div>
+        <div class="row">
             <div class="title">
-                <label class="title-label-2">¿Volver a probar? <a [routerLink]="['../']">Pulsa
+                <label class="title-label-2">¿Volver a probar? <a [routerLink]="['../']" (click)="onSubmit()">Pulsa
                         Aquí</a></label>
             </div>
         </div>

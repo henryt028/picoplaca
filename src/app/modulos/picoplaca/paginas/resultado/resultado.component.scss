@@ -7,7 +7,7 @@
 }
 .inner {
     align-self: center;
-    width: 300px;
+    width: 400px;
 }
 .row{
     margin: auto;
@@ -17,6 +17,12 @@
     margin: auto;
     align-self: center;
     padding: 20px 0px 20px 0px;
+}
+.data{
+    width: fit-content;
+    margin: auto;
+    align-self: center;
+    padding: 10px 0px 10px 0px;
 }
 .form{
     margin: auto;
@@ -37,26 +43,4 @@
     text-align: left;
     font-family: "Lato-Medium";
 }
-.predictor-input{
-    background-color: rgba($color: #ffffff, $alpha: 0.2);
-    border-color: rgba($color: #333232, $alpha: 0.2);
-    color: rgb(102, 104, 103);
-    height: 40px;
-    font-size: 15px;
-    margin: auto;
-    font-family: "Lato-Medium";
-    width: 100%;
-}
-::placeholder {
-    color: #D1D4D3;
-    opacity: 0.6;
-  }
-  #btn{
-    background-color: #333232;
-    color: #ffffff;
-    margin-top: 20px;
-    width: 100%;
-    font-size: 15px;
-    height: 40px;
-    font-family: "Lato-Medium";
-}
+
