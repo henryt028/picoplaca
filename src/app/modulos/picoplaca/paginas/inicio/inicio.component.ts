@@ -43,7 +43,7 @@ export class InicioComponent implements OnInit {
     get f() {
         return this.predictorForm.controls;
     }
-    disableButton() {
+    disableButton(): boolean {
         if (this.predictorForm.get('placa').value !== null &&
             this.predictorForm.get('fecha').value !== '' &&
             this.predictorForm.get('hora').value !== null) {

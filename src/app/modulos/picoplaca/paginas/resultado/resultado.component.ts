@@ -35,10 +35,9 @@ export class ResultadoComponent implements OnInit {
     onSubmit() {
         localStorage.removeItem('request');
     }
-    checkTime() {
+    checkTime(): boolean {
         const hora = this.request.hora.hora;
         const minutos = this.request.hora.minuto;
-        console.log(minutos);
         if (this.horas.indexOf(hora) !== -1) {
             return false;
         } else if (hora === 9 || hora === 19) {
@@ -51,7 +50,7 @@ export class ResultadoComponent implements OnInit {
             return true;
         }
     }
-    checkRestriction(day: number) {
+    checkRestriction(day: number): boolean {
         const r = this.dict[day].value;
         const n = this.request.numeroPlaca.toString().split('').pop();
         if (r.indexOf(parseInt(n, 10)) !== -1) {
@@ -60,7 +59,7 @@ export class ResultadoComponent implements OnInit {
             return false;
         }
     }
-    check() {
+    check(): boolean {
         const d = new Date(this.request.fecha);
         const day = d.getDay();
         if (day === 5 || day === 6) {
@@ -84,13 +83,13 @@ export class ResultadoComponent implements OnInit {
             this.prediction = 'No puede circular.  El día y hora mostrados a continuación.';
         }
     }
-    formatMin(m: number) {
+    formatMin(m: number): string {
         if (m === null) {
             return '00';
         } else if (m < 10) {
             return '0' + m;
         } else {
-            return m;
+            return m.toString();
         }
     }
 }
